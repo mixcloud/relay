@@ -52,6 +52,11 @@ export type RenderProps = {
  */
 const requestCache = {};
 
+// This is to try to solve this bug for SSR https://github.com/facebook/relay/issues/2566
+export const clearRequestCache = () => {
+  requestCache = {};
+}
+
 const NETWORK_ONLY = 'NETWORK_ONLY';
 const STORE_THEN_NETWORK = 'STORE_THEN_NETWORK';
 const DataFromEnum = {
