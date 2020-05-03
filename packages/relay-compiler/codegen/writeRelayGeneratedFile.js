@@ -112,7 +112,7 @@ async function writeRelayGeneratedFile(
             ...generatedNode,
             params: {
               ...generatedNode.params,
-              text: null,
+              text,
               id: await persistQuery(text, sourceHash),
             },
           };
